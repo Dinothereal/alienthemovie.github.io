@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>the nun</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("THE NUN").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        THE NUN
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p6.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《鬼修女》（英語：The Nun）</h3>
+            是一部2018年美國超自然恐怖片，由柯林·哈迪執導，
+            溫子仁與彼得·沙佛朗共同監製。本片為2016年電影《厲陰宅2》的衍生電影，同時也是厲陰宅宇宙的第三部衍生作品。
+            由泰莎·法蜜嘉、德米安·畢齊、夏洛特·荷蒲和邦妮·艾倫斯主演。1952年，在羅馬尼亞一間與世隔絕的卡拉塔修道院（Cârța Monastery）中，
+            一個年輕的修女自殺了，梵蒂岡派出一名藏有悲慘過去的神父和一名剛入教的初學修女來調查這起神秘死亡事件，他們一步一步嘗試揭開這個教團的邪惡祕密，
+            卻遭到瓦拉克的攻擊和誘惑，神父被瓦拉克封進棺材並埋進墓地，最後被修女救回，並在書中找到瓦拉克的線索。之後修女被瓦拉克弄得迷失，
+            但亦從中受到了天主的指引，卡拉塔修道院是由一個熟悉邪術和擁有豐富魔鬼知識的卡拉爵士建立的，在他召喚魔鬼期間，教會的人和十字軍趕到並阻止，
+            他們用耶穌基督的血把魔鬼封印，之後那裡就變成卡拉塔修道院。在二戰時被蘇聯轟炸機炸毀了修道院而解開了封印，於是瓦拉克又重新出現 ...
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=pzD9zGcUNrw&ab_channel=WarnerBros.Pictures" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

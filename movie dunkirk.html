@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>dunkirk</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("DUNKIRK").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        DUNKIRK
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p8.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《敦克爾克大行動》（英語：Dunkirk）</h3>
+            是一部2017年由英國、法國、美國及荷蘭合拍的驚悚戰爭電影，
+            由克里斯多福·諾蘭執導和編劇，並與艾瑪·湯瑪斯共同監製。主演包括菲昂·懷海德、湯姆·格林-卡尼、傑克·洛登、湯姆·哈迪、肯尼斯·布萊納、阿紐林·巴納德、
+            哈利·斯泰爾和席尼·墨菲。故事背景設定為第二次世界大戰，主要敘述敦克爾克戰役。
+            諾蘭在撰寫故事時，是以空中、陸地和海洋三個角度來組成敘事。此外，諾蘭還努力透過細節來營造懸念，因為劇本極少有對白。
+            於2016年5月23日在法國的敦克爾克進行，霍伊泰·凡·霍伊泰馬以IMAX70毫米和65毫米的大格式電影膠片來拍攝。
+            《敦克爾克大行動》由華納兄弟負責發行，於2017年7月21日在美國上映。電影上映後獲得了一致好評，其敘事手法、演員的表現、配樂都深受讚譽。
+            1940年，二戰時的法國被納粹德國占領，由英國、加拿大和法國所組成的盟軍被逼退至敦克爾克，僅能聯合防守並想辦法撤離。年輕的英國陸軍二等兵湯米跟隨的隊伍受德軍殲滅後，
+            倖存的他跑到當時近四十萬盟軍滯留的敦克爾克海灘 ...
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=F-eMt3SrfFU&ab_channel=WarnerBros.Pictures" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

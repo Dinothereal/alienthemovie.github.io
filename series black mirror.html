@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>black mirror</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+        
+        
+        function writeData() {
+            db.collection("BLACK MIRROR").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        BLACK MIRROR
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t8.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《黑鏡》（英語：Black Mirror）</h3>
+            是一部由查理·布魯克創作的英國獨立單元劇，該劇由布魯克和安娜貝爾·瓊斯擔任節目統籌。該劇展現現代社會發展，特別是對新技術利用的副作用，
+            其中的每一集是獨立的，背景通常設置在架空的現實或近未來，並以黑暗和諷刺的語氣和或輕或重的實驗感來表現劇情。
+            《黑鏡》的靈感源於像《迷離時空》這樣能夠很好處理爭議性的當代話題又不用擔心審查的老獨立單元劇，布魯克開創《黑鏡》，
+            以突出與人類與技術關係相關的主題，創造以「我們現在的生活方式以及如果我們愚笨之時在10分鐘內可能的生活方式」的故事。
+            該劇集的前兩季分別在英國電影片道第四台首播。於2015年網飛買下該劇，
+            隨後分為第三季和第四季每季六集分別上線於2016和2017年。第五季於2019年上線。
+            該劇集獲得評論家的廣泛好評，獲得許多獎項和提名，在國際上吸引力不斷提升。
+            其中第三季的《聖朱尼佩洛》和第四季的《聯邦星艦卡里斯特》兩集共獲得六項艾美獎，並都獲得「最佳電視電影」的獎項。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=jDiYGjp5iFg&ab_channel=Netflix" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

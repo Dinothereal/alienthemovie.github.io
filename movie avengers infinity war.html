@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>avengers infinity war</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("AVENGERS INFINITY WAR").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        AVENGERS INFINITY WAR
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p4.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《復仇者聯盟：無限之戰》（英語：Avengers: Infinity War）</h3>
+            是一部2018年上映的美國超級英雄電影，改編自漫威漫畫旗下的超級英雄團隊復仇者聯盟，
+            由漫威影業製作及華特迪士尼工作室電影發行。本片為《復仇者聯盟2：奧創紀元》（2015年）的續集，同時也是漫威電影宇宙系列的第19部電影作品。
+            電影由羅素兄弟執導，並由克里斯多佛·馬庫斯與史蒂芬·麥費利負責撰寫劇本。電影主演包括了許多漫威電影宇宙的演員，
+            如小勞勃·道尼、克里斯·漢斯沃、馬克·盧法洛、保羅·貝特尼等原班人馬。電影中，復仇者們跟星際異攻隊聯合共同阻止薩諾斯收集無所不能的無限寶石。
+            作為《復仇者聯盟》系列的第三部電影。羅素兄弟於2015年4月落實執導，基於吉姆·史塔林於1991年的《無限手套》漫畫及喬納森·希克曼於2013年的《無限》的靈感而創作的。
+            電影於2017年1月在喬治亞州福瑞耶特縣的松林製片廠開拍，漫威電影宇宙系列的大部分演員都將會重演他們的角色。
+            製作預算為3.16億至4億美元，成為製作成本最昂貴的電影之一。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8&ab_channel=MarvelEntertainment" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

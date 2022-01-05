@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>the walking dead</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("THE WALKING DEAD").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        THE WALKING DEAD
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t2.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《陰屍路》（英語：The Walking Dead）</h3>
+            是一部由法蘭克·戴拉邦創作的美國恐怖喪屍電視影集，改編自由勞勃·柯克曼、東尼·摩爾和
+            查理·艾德勒共同繪製的同名漫畫。直至第九季為止，主角是由安德魯·林肯所扮演的副警長瑞克·格萊姆斯，
+            他從昏迷中醒來後發現自己身處於已被喪屍佔領的末日後世界裡。接著他決定開始尋找自己的家人，並在沿路中遇到許多其他的倖存者。
+            影集的標題「行屍走肉」不只是指肆虐的喪屍，也意指這群倖存者。2010年10月31日於美國有線電視頻道AMC首播。本劇目前播出十一季，
+            後將會推出以《陰屍路》背景宇宙觀衍生劇、原劇高人氣要角「戴瑞」與「卡蘿」故事的衍生劇、
+            以瑞克·格萊姆斯為主角三部曲電影版。
+            目前為止，這部影集獲得了普遍的好評，並在許多獎項中入圍或得獎，包括美國編劇工會獎以及金球獎的最佳戲劇類電視影集。
+            《陰屍路》在美國的收視率上也有傑出表現，超越了許多有線電視影集的紀錄，其中第五季首播共有1,729萬人收看，
+            成為了基本有線電視戲劇類影集史上最多人收看的一次播出。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=qwOWJ8pPgk8&ab_channel=IGN" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

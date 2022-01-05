@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>wayward pines</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("WAYWARD PINES").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        WAYWARD PINES
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t12.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《黑松林》（英語：Wayward Pines）</h3>
+            是一部改編自布萊克·克勞奇的小說《松林異境》，由查德·賀智開發，於2015年5月14日在FOX開播的驚悚懸疑電視劇。
+            講述麥·迪倫所飾演之美國特勤局探員伊森·柏克來到愛達荷州的神秘小鎮－黑松林調查失踪探員的故事。本劇由查德·賀智開發並擔任執行製作，
+            而奈特·沙馬蘭則身兼導演與執行製作，本劇於2015年5月14日正式於FOX首播。雖然本劇為一部有限劇集，但在開播後，電視播出、DVR及評價皆獲得不錯的反應，
+            本劇由查德·賀智、奈特·沙馬蘭、唐納德·迪·賴恩與艾希溫·拉傑恩擔任執行製作。
+            2013年5月13日，FOX正式預訂本系列10集。
+            本劇改編自布萊克·克勞奇的系列小說《松林異境》，第一季前五集是根據2012年出版的第一部《迷途》改編，後五集劇情則是由2013年出版的第二部
+            《淪陷》與2014年出版的第三部《最後小鎮》改編集結而成。
+            FOX考慮到本劇收視不錯，故正式宣布續訂本劇第二季。
+            《黑松林》獲得了普遍的好評。在爛番茄評論中，獲得79%新鮮度，
+            “極盡所能地用毛骨悚然與懸疑的方式呈現，是奈特·沙馬蘭以《黑松林》回歸的風格。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=RsQ9Fl0VCkk&ab_channel=SeriesTrailerMP" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

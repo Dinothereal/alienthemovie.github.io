@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>game of thrones</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("GAME OF THRONES").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        GAME OF THRONES
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t9.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《冰與火之歌：權力遊戲》（英語：Game of Thrones）</h3>
+            是一部美國中世紀奇幻史詩劇情類型的電視連續劇。該系列連續劇由大衛·貝尼奧夫和D·B·魏斯替HBO創作。劇情改編自喬治·R·R·馬丁的奇幻小說系列
+            《冰與火之歌》。該系列的影集於2011年4月17日在HBO開播，至2019年5月19日完結，播出了八季，共73集。在2011年4月19日第一集作首播。
+            《權力遊戲》遵循著幾個故事線發展，該劇設定於虛構的維斯特洛與厄斯索斯大陸上，
+            其中一段有關維斯特洛與七個王國的鐵王座的故事線是隨著貴族朝代中聯盟和衝突的脈絡，一方面爭奪王位，另一方爭取獨立。
+            劇情另一面聚焦於該被廢除的統治王朝中最後一個後裔，他被流放並計劃重奪王位；另一故事線則沿著守夜人，
+            捍衛領土免受北方兇猛民族和傳奇生物侵害的兄弟手足之情。《權力遊戲》在HBO上獲得創紀錄的收視率，並擁有著廣泛、活躍且國際化的粉絲群，
+            最後一季的影集亦因其濃縮的故事及創造性的決定而受到進一步的批評，許多人認為這是令人失望的結論。
+            獎項方面，該影集獲得58項《黃金時段艾美獎》，這是連續劇系列中最多的傑出影集系列。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=KPLWWIOCOOQ&ab_channel=GameofThrones" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

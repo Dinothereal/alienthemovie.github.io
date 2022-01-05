@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>stranger things</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("STRANGER THINGS").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        STRANGER THINGS
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t11.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《怪奇物語》（英語：Stranger Things）</h3>
+            是一部由杜夫兄弟創作的美國科幻恐怖影集，於2016年7月15日在Netflix首播。
+            該劇講述一名小男孩失蹤後，一位有超能力的女孩幫男孩的朋友尋找男孩的下落，而男孩的哥哥與小鎮警署的警長也各自展開他們的調查。
+            本劇將時間點設在1980年代的印地安納州，其劇情、演出與配樂都向80年代的經典電影及影集致敬，如史蒂芬·史匹柏、約翰·卡本特、
+            史蒂芬·金和喬治·盧卡斯等等，[5]因而本劇播出後獲得了極高的評價。
+            目前已播出三季，並預計延續至第四季或第五季完結。第四季預計在2022年春季播出。
+            故事發生在1980年代，位於美國印第安納州的一座虛構城鎮霍金斯鎮（英語：Hawkins），鎮上的一座美國能源部名下的政府實驗室，
+            涉及著跟超常現象跟超自然現象有關的機密實驗，當中還包含許多不為人知的人體實驗樣本。實驗人員在無意間開啟一條通往稱作「顛倒世界」
+            的另一維度之傳送門，該維度所造成的危害隨著時間推及而波及到霍金斯鎮上的市民。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=b9EkMc79ZSU&ab_channel=Netflix" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

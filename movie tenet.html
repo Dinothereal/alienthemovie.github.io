@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>tenet</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("TENET").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        TENET
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p7.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《TENET天能》（英語：Tenet）</h3>
+            是一部於2020年上映英國與美國合拍的科幻動作驚悚片，由克里斯多福·諾蘭編劇和執導。
+            主演包括約翰·大衛·華盛頓、羅伯·派汀森、伊莉莎白·戴比基、蒂普·卡柏迪亞、米高·肯恩和肯尼斯·布萊納。
+            由華納兄弟定於2020年8月26日開始先在海外市場上映，之後於2020年9月3日在美國上映。
+            電影開場，無名的主角（Protagonist）為了協助中央情報局的行動臥底進一支傭兵小隊，在烏克蘭基輔國家歌劇院受恐怖攻擊時，
+            保護一位重要接頭人並取得鈽241，卻曝光臥底身分險些喪命，此時，一名背包別著紅繩吊飾的蒙面槍手使用逆行的子彈殺死敵人，
+            讓主角僥倖逃生，然而主角仍在回程時被傭兵逮住，以酷刑逼迫他透露機密情報，主角吞下自殺藥丸求死。醒來後，主角得知隊友已全軍覆沒，
+            這次任務只是對他忠誠度的考驗。從上司那裏得知神秘代號「天能（TENET）」」和交叉手指手勢的抽象資訊後，他便被招募入一個秘密組織拯救世界
+            未來人使用逆熵技術展開戰爭，導致許多戰爭遺物以逆行效應來至現代...
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=L3pk_TBkihU&ab_channel=WarnerBros.Pictures" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

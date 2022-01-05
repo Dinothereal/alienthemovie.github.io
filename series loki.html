@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>loki</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("LOKI").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        LOKI
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t3.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《洛基》（英語：Loki）</h3>
+            是一部美國劇情超級英雄類型的網路影集，由麥可·沃爾德倫主創，改編自漫威漫畫的同名標題角色。
+            影集是漫威影業開發製作的漫威電影宇宙的第3部電視劇作品，與漫威電影宇宙系列電影處於同一架空世界和共同世界，
+            於線上串流媒體平台Disney+首播。第一季由麥可·沃爾德倫擔當首席編劇，凱特·赫倫執導。
+            湯姆·希德斯頓繼續飾演在漫威電影宇宙系列電影中的角色洛基，並擔當執行製作人，主演還包括古古·瑪芭塔-勞、烏米·馬薩庫、
+            尤金·科德爾、塔拉·史壯、歐文·威爾森、蘇菲雅·迪馬蒂諾。
+            2018年9月，漫威影業宣布為迪士尼旗下的在線流媒體平台Disney+開發數個限定影集，以漫威電影宇宙中的「二級核心」人物為主角，
+            洛基，湯姆·希德斯頓有望回歸繼續出演相應角色。2019年2月，麥可·沃爾德倫被聘為節目統籌。4月，該影集正式確定製作。
+            凱特·赫倫確定執導第一季。影集的主體拍攝於2020年1月於2020年12月殺青。
+            《洛基》於2021年6月9日播出，第一季共6集，屬於漫威電影宇宙第四階段。第二季正在開發階段。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=nW948Va-l10&ab_channel=MarvelEntertainment" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

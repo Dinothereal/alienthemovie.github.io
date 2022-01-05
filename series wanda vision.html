@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>wanda vision</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("WANDA VISION").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        WANDA VISION
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t5.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《汪達幻視》（英語：WandaVision）</h3>
+            是一部美國劇情超級英雄類型的迷你網路影集，改編自漫威漫畫的角色「緋紅女巫」汪達·馬克希莫夫和幻視，由潔克·薛佛主創並擔當首席編劇。
+            影集是漫威影業開發製作的漫威電影宇宙的首部電視劇作品，與漫威電影宇宙系列電影處於同一架空世界和共同世界，
+            於線上串流媒體平台Disney+首播。伊莉莎白·歐森和保羅·貝特尼繼續分別飾演在漫威電影宇宙系列電影中的角色汪達·馬克希莫夫和幻視。
+            主演還包括黛布拉·喬·拉普、弗雷德·邁拉麥德、凱薩琳·哈恩、泰娜·帕麗斯。
+            漫威影業宣佈為迪士尼旗下的在線流媒體平台Disney+開發數個限定影集，以漫威電影宇宙中的「二級核心」人物為主角，如緋紅女巫
+            汪達·馬克希莫夫和幻視，伊莉莎白·歐森和保羅·貝特尼有望回歸繼續出演相應角色。2019年4月，該影集正式確定製作。
+            影集的拍攝於2019年11月，2020年11月殺青。《汪達幻視》前兩集於2021年1月15日播出，3月5日完結，共9集。
+            影集屬於漫威電影宇宙第四階段，是該階段的第一部電視劇。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=sj9J2ecsSpo&ab_channel=MarvelEntertainment" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

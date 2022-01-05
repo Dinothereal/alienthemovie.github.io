@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>the mandalorian</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("THE MANDALORIAN").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        THE MANDALORIAN
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t1.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《曼達洛人》（英語：The Mandalorian）</h3>
+            是一部美國太空歌劇網路電視劇，取材自喬治·盧卡斯的《星際大戰》。故事發生在《星際大戰六部曲：絕地大反攻》事件五年後。
+            該劇主要由強·法夫洛撰寫劇本並與戴夫·費羅尼、凱薩琳·甘迺迪與柯林·威爾森共同擔任執行製片人。
+            《曼達洛人》第一季於2019年11月12日在Disney+開播，得到整體好評，
+            獲得第72屆黃金時段艾美獎最佳劇情類影集提名，並贏下第72屆黃金時段創意藝術艾美獎的7個獎項。第二季於2020年10月30日首播。迪士尼已預定第三季。
+            兩部衍生影集《波巴·費特之書》和《亞蘇卡》正在開發或拍攝階段，其中《波巴·費特之書》計劃於2021年12月開播。
+            故事發生時間在1983年電影《星際大戰六部曲：絕地大反攻》中的銀河帝國滅亡五年之後，第一軍團出現之前，曼達洛人丁·賈林是一名銀河系外圍的孤獨槍手和賞金獵人，
+            他遠離新共和國，在一次任務中遇到「孩子」格羅古並開始保護他。在第二季中，曼達洛人開始幫助孩子找尋同類，
+            與此同時，星區長吉迪恩率領的銀河帝國殘餘勢力繼續搜捕孩子 ...
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=aOC8E8z_ifw&ab_channel=StarWars" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

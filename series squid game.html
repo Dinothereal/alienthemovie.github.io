@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>squid game</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("SQUID GAME").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        SQUID GAME
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t4.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《魷魚遊戲》（韓語：오징어 게임，英語：Squid Game）</h3>
+            是於2021年9月17日全球上線的Netflix韓國原創劇，本劇由黃東赫執導和編劇，也是他首度執導Netflix原創劇。
+            該劇講述456名背景各異但一樣債台高築的玩家，為了贏得456億韓元的獎金參加一系列致命的兒童遊戲。該系列的名字取自於名字相似的韓國兒童游戲。
+            該遊戲項目共456人參加，他們雖然背景各異，但都一樣在經濟、生活方面走投無路。
+            遊戲為期六天，在某神秘組織把守下的秘密場所進行，內容為「一二三木頭人」、「拔河」等六個兒童傳統遊戲。
+            敗者將面臨以死淘汰的命運，但最終勝者可獲得高達456億韓圓獎金。本劇故事圍繞著此遊戲、其背後的黑幕，以及參賽者的人性而展開。
+            黃東赫根據自己早年的經濟困難以及韓國的貧富差距，構思了該劇的事件。
+            該劇播出後不久就躍升為Netflix最受歡迎的原創劇集，播放量在94個國家的排行榜上位居首位。自上映以來，
+            僅僅17天就吸引了1.11億戶觀眾，超過了《柏捷頓家族：名門韻事》過去28天創下8,200萬觀眾的紀錄成為Netflix史上最受歡迎的影集。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=oqxAJKy0ii4&ab_channel=Netflix" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

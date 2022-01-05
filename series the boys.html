@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>the boys</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("THE BOYS").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        THE BOYS
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t6.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《黑袍糾察隊》（英語：The Boys）</h3>
+            是一部超級英雄類型的美國網路電視影集，根據蓋斯·恩尼斯和德瑞克·羅伯森的同名漫畫改編，由埃里克·克里普基、伊凡·戈博和塞斯·羅根開創，
+            於2019年7月26日在亞馬遜影片首播。2019年7月，在劇集首播之前，亞馬遜影片宣佈預訂第二季，於2020年9月4日播出。2020年7月，
+            在第二季播出之前，亞馬遜影片宣佈預訂第三季。另有一部衍生影集正在開發製作。
+            本劇設定在一個超人類被一般大眾視為英雄並隸屬於大公司沃特國際企業的宇宙中，該公司將超級英雄作為行銷營利的工具，
+            而超級英雄們充滿英雄作為的表面下其實自大且腐敗。 本劇聚焦於兩個團隊：沃特的主打超級英雄團隊「七巨頭」以及目標是將腐敗的英雄們
+            維持在控制下的私刑者「黑袍糾察隊｣。描述黑袍糾察隊與「七巨頭」的首次衝突，其原因是布徹認定護國超人使他的妻子貝卡失蹤。
+            在護國超人與麥德琳謀劃向政府爭取對超級英雄的支持時，黑袍糾察隊試圖藉由揭露沃特的秘密來阻止他們。
+            在雙方衝突時發展出浪漫關係，而布徹並不信任安妮 ...
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=M1bhOaLV4FU&ab_channel=AmazonPrimeVideoUK" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

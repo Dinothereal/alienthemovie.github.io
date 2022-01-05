@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>007 skyfall</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("007 SKYFALL").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        007 SKYFALL
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p23.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《007：空降危機》（英語：Skyfall）</h3>
+            是由EON製作公司製作，哥倫比亞電影公司和米高梅發行的一部2012年動作驚悚電影，
+            該片為EON製作公司製作的第二十三部詹姆士·龐德電影。由丹尼爾·克雷格三度飾演詹姆士·龐德，哈維爾·巴登飾演反派洛烏·西法。
+            山姆·曼德斯擔任導演，約翰·洛根、尼爾·普維斯與羅伯·韋德共同編劇，並由愛黛兒推出榮獲奧斯卡金像獎的主題曲。
+            在這部電影中，詹姆士·龐德調查了對MI6總部受襲擊的事件，並發現到這只是歹徒──前MI6特務洛烏·西法（Raoul Silva，哈維爾·巴登飾）
+            對「M」一連串攻擊的一部分。在該片中，在前兩部作品缺席的兩名龐德系列角色再度出現，分別是軍需官Q先生（班·維蕭飾）
+            和M的秘書伊芙·莫尼彭尼（娜歐蜜·哈瑞絲飾），而這部電影也是龐德系列中茱蒂·丹契最後一次飾演「M夫人」，她所扮演的職位則由「M先生」加雷斯·馬洛里（
+            雷夫·范恩斯飾）取代，儘管茱蒂·丹契在下一部龐德電影《007：惡魔四伏》中仍會短暫出現。
+            《007：空降危機》是索尼影業發行的所有電影中總票房第二高的電影。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=6kw1UVovByw&ab_channel=SonyPicturesEntertainment" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

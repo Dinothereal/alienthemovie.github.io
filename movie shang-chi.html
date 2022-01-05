@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>shang-chi</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("SHANG-CHI").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        SHANG-CHI
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p11.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《尚氣與十環傳奇》（英語：Shang-Chi and the Legend of the Ten Rings)</h3>
+            是一部2021年上映的美國超級英雄電影，以漫威漫畫角色尚氣為主角，由迪士尼漫威影業製作，華特迪士尼工作室電影發行。
+            影片為漫威電影宇宙的第25部電影作品，屬於漫威電影宇宙第四階段。電影由德斯汀·丹尼爾·克雷頓執導並編劇，
+            大衛·卡拉漢克和安德魯·蘭哈姆（Andrew Lanham）參與劇本創作，由演員劉思慕領銜出演尚氣，
+            主演還包括奧卡菲娜、張夢兒、陳法拉、佛洛里安·蒙特亞努、黃凱旋、楊紫瓊、班·金斯利和梁朝偉。
+            電影開頭由應麗口述徐文武的起源：一千年來，徐文武靠著神器「十環」的威力成立強大的「十環幫」，四處在中國南征北戰且長生不老，
+            在世界各地掌握地下資源和左右各國局勢。1996年，徐文武開始尋找神秘地點大羅，卻迷失於大羅的森林迷宮，
+            並遇見大羅的守護者應麗。應麗以太極擊退了文武，兩人卻因此機緣墜入愛河，為了成全愛情，文武從十環幫隱退並封印十環。
+            幾年後，已為人母的應麗跟年幼的兒子徐尚氣說自己為了來到外界生活，已經把大羅之力歸還，但尚氣卻不知為何有這股力量 ...
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=giWIr7U1deA&ab_channel=MarvelEntertainment" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

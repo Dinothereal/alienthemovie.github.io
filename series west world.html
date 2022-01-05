@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>westworld</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("WESTWORLD").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        WESTWORLD
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t10.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《西方極樂園》（英語：Westworld）</h3>
+            是一部於HBO播出的美國科幻西部電視影集，由強納森·諾蘭和麗莎·喬伊夫妻共同創作，改編自美國小說家麥可·克萊頓導演和編劇的1973年同名科幻電影，
+            以及較少程度的1976年續集《未來世界》。這是第二次根據兩部電影改編的電視劇，第一次是一部短暫的1980年劇集《西部之外》。
+            強納森·諾蘭、麗莎·喬伊、J·J·亞柏拉罕與布萊恩·柏克共同擔任執行製片人，強納森擔任第一集與季末最終集的導演。
+            本作於2016年10月2日首播，以10集構成。
+            故事設定在未來世界，在一個高科技成人主題樂園：「西方極樂園」裡有模擬真人的「接待員」機器人和各種機械動物，
+            在各種情境故事裡，讓遊客盡情享受冒險、性慾、暴力與殺戮等慾望，只要付出高昂費用都能在西方極樂園中獲得滿足。
+            但是這世界下，部分機器人出現自我覺醒，發現了自己只是作為故事角色的存在，並想擺脫控制；
+            樂園的管理層害怕樂園的創造者控制著樂園的一切而試圖奪取其控制權，買下樂園的一名神秘男子試圖重新發現當年旅程所留下的謎團。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="send">
+
+
+            <div class="button">
+                <a href="https://www.youtube.com/watch?v=kEkZdgWu7mM&ab_channel=HBOUK" class="trailer">觀看預告</a>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

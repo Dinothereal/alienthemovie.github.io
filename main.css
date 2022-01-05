@@ -1,0 +1,126 @@
+﻿body
+{
+    background-color:gold;
+}
+.title {
+    text-align: center;
+    font-family: 'Bai Jamjuree', "微軟正黑體", sans-serif;
+    font-weight: bold;
+    font-size: 375px;
+    position:relative;
+    color: black;
+
+    animation-name: MoveDown; 
+    animation-duration: 6s; /*持續時間*/
+    animation-delay: 0s; /*開始時間*/
+    animation-iteration-count:initial;
+}
+@keyframes MoveDown {
+    from {
+        left: -80%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+.ufopic {
+    width: 7%;
+    position: relative;
+    left:-50%;
+    animation-name: UFO;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes UFO {
+
+    0% {
+        left: -60%;
+    }
+    25% {
+        left: 30%;
+    }
+    50% {
+        left: 40%;
+    }
+    75% {
+        left: 47%;
+    }
+    96% {
+        opacity: 100%
+    }
+    100% {
+        left: 93.2%;
+        opacity:0%
+    }
+}
+.select {
+    display: flex;
+    position: relative;
+    text-align: center;
+    font-family: 'Bai Jamjuree', "微軟正黑體", sans-serif;
+    
+}
+.movie {
+    animation-name: Ocp;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: initial;
+    margin-left: 33%;
+    margin-top: 5%;
+    color: gold;
+    background-color: black;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.movie:hover{
+    transform:scale(1.2);
+}
+.tub {
+    animation-name: Ocp;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: initial;
+    margin-left: 10%;
+    margin-top: 5%;
+    color: gold;
+    background-color: black;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.tub:hover {
+    transform: scale(1.2);
+}
+
+@keyframes Ocp {
+    from {
+        opacity:0%;
+    }
+
+    to {
+        opacity:100%;
+    }
+}

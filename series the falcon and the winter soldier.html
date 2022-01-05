@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>the falcon and the winter soldier</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("THE FALCON AND THE WINTER SOLDIER").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="series.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        THE FALCON<br>AND THE WINTER SOLDIER
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/影集/t7.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《獵鷹與酷寒戰士》（英語：The Falcon and the Winter Soldier）</h3>
+            是一部美國劇情超級英雄類型的網路影集，改編自漫威漫畫的角色「獵鷹」山姆·威爾遜和「酷寒戰士」巴奇·巴恩斯。
+            影集是漫威影業開發製作的漫威電影宇宙的第2部電視劇作品，與漫威電影宇宙系列電影處於同一架空世界和共同世界，於線上串流媒體平台Disney+首播。
+            麥爾坎·斯貝爾曼主創並擔當首席編劇，卡莉·史考格蘭德擔當導演。賽巴斯汀·史坦和安東尼·麥凱繼續分別飾演漫威電影宇宙系列電影中的角色
+            「酷寒戰士」巴奇·巴恩斯和「獵鷹」山姆·威爾遜，主演還包括懷特·羅素、艾琳·凱莉曼、丹尼·拉米瑞茲、喬治·聖皮埃爾、
+            唐·奇鐸、丹尼爾·布爾。2018年9月，報道稱漫威影業將開發幾個限定影集，以漫威電影宇宙中的「二級核心」人物為主角，
+            並爭取啟用在電影中出演相應角色的演員。2019年4月，影集正式確定製作。
+            5月，斯考格蘭德確認擔當導演。於2019年10月在美國喬治亞州亞特蘭大拍攝。10月底殺青。
+            《獵鷹與酷寒戰士》於2021年3月19日首播，4月23日完結，共6集，影集屬於漫威電影宇宙第四階段。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=IWBsDaFWyTE&ab_channel=MarvelEntertainment" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>the suicide squad</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("THE SUICIDE SQUAD").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        THE SUICIDE SQUAD
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p24.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《自殺突擊隊：集結》（英語：The Suicide Squad）</h3>
+            是一部2021年上映的美國超級英雄電影，改編自DC漫畫旗下的漫畫《自殺突擊隊》。
+            影片為2016年電影《自殺突擊隊》的續集和軟重啟作品，是DC擴展宇宙的第十部作品。電影由詹姆斯·岡恩執導並編劇，主演包括瑪格·羅比、
+            伊卓瑞斯·艾巴、約翰·希南、喬爾·金納曼、席維斯·史特龍、薇拉·戴維絲、大衛·達斯馬齊連、丹妮拉·梅爾基奧、傑·寇特尼、彼得·卡帕爾蒂、
+            艾莉絲·布拉加和皮特·戴維森。2016年3月，在《自殺突擊隊》上映之前，華納已計劃開拍續集。漫威電影宇宙中《星際異攻隊》導演詹姆斯·岡恩因不當言論被迪士尼公司解僱。
+            隨後，華納聘請詹姆斯·岡恩為影片撰寫劇本。2019年1月，詹姆斯·岡恩與華納簽訂導演協議。影片拍攝於2019年9月在喬治亞州亞特蘭大，2020年2月在巴拿馬殺青。
+            南美洲的科托馬爾他島國政府被反美武裝勢力推翻。阿曼達·華勒派遣美夢監獄的X特遣隊偷渡至該國，計劃潛入約頓海姆監獄執行任務。約頓海姆監獄是納粹時期遺留至今的實驗室，
+            科托馬爾他政府長期進行名為「海星計劃」的秘密實驗 ...
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=JuDLepNa7hw&ab_channel=MovieCoverage" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

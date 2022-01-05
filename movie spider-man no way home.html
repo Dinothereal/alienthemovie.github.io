@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>spider-man no way home</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("SPIDER-MAN NO WAY HOME").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        SPIDER-MAN NO WAY HOME
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p1.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《蜘蛛人：無家日》（英語：Spider-Man: No Way Home）</h3>
+            是一部2021年美國超級英雄電影，由漫威漫畫旗下角色蜘蛛人故事改編，
+            哥倫比亞影業與漫威影業共同製片，並由索尼影視娛樂發行。本片為2019年電影《蜘蛛人：離家日》的續集，「漫威電影宇宙」的第27部電影作品，
+            由強·華茲執導，克里斯·麥肯納與艾瑞克·桑默斯共同編劇。主演包括湯姆·霍蘭德、辛蒂亞、班奈狄克·康柏拜區、雅各布·貝塔隆
+            、強·法夫洛、傑米·福克斯、威廉·達佛、艾佛烈·蒙利納、黃凱旋、東尼·雷佛羅里、瑪麗莎·托梅、安德魯·加菲爾德和陶比·麥奎爾。
+            2019年8月，索尼影視娛樂和漫威影業談判破局，導致漫威影業離開了該項目，但在下一個月，漫威和索尼達成協議，繼續把蜘蛛人保留在漫威電影宇宙之中。
+            在神秘法師與《號角日報》的推動下，彼得·帕克的身份暴露，彼得等人被損害控制公司探員帶走審問，律師麥特·梅鐸出面協助彼得應對官司，
+            但事情並未因此而平息。麻省理工學院拒絕了彼得、MJ及奈德的大學申請。
+            決定請求奇異博士協助施法使世人忘掉彼得就是蜘蛛人的事實 ...
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=JfVOs4VSpmA&ab_channel=SonyPicturesEntertainment" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

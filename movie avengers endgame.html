@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>avengers endgame</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("AVENGERS ENDGAME").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        AVENGERS ENDGAME
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p10.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《復仇者聯盟：終局之戰》（英語：Avengers: Endgame）</h3>
+            是一部於2019年上映的美國史詩超級英雄電影，改編自漫威漫畫的《復仇者聯盟》，由漫威影業製作及華特迪士尼工作室電影發行。
+            本片為2018年電影《復仇者聯盟：無限之戰》的續集，同時也是漫威電影宇宙系列的第22部電影作品。此電影由羅素兄弟執導。
+            電影主演包括小勞勃·道尼、克里斯·伊凡、馬克·盧法洛、克里斯·漢斯沃、史嘉蕾·喬韓森、傑瑞米·雷納、唐·奇鐸、保羅·路德、布麗·拉森、
+            電影中，復仇者聯盟中的倖存成員與他們的盟友共同努力以扭轉薩諾斯在無限之戰中所造成的傷害。
+            此電影於2014年10月宣布開拍，是作為《復仇者聯盟：無限之戰（下集）》。羅素兄弟於2015年4月開始執導，史蒂芬·麥費利及克里斯多佛·馬庫斯於同年5月簽約為電影編寫劇本。
+            並於2018年1月結束。電影預算為3.56億美元，成為史上最昂貴電影之一。影評人更讚揚此電影是長達十年的22部電影故事的高潮。打破了無數的票房紀錄，全球票房收入超過27億美元，
+            成為2019年最賣座電影、全球最賣座超級英雄電影。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=TcMBFSGVi1c&ab_channel=MarvelEntertainment" class="trailer">觀看預告</a>
+        </div>
+    </div>
+
+</body>
+</html>

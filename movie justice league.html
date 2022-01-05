@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>justice league</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("JUSTICE LEAGUE").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        JUSTICE LEAGUE
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p25.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《正義聯盟》（英語：Justice League）</h3>
+            是一部於2017年上映的美國超級英雄電影，以DC漫畫旗下的超級英雄團隊正義聯盟為題材。
+            本片為DC擴展宇宙的第五部作品。由查克·史奈德執導，克里斯·泰瑞歐和喬斯·溫登撰寫劇本。電影主演包括亨利·卡維爾、班·艾佛列克、
+            艾美·亞當斯、蓋兒·加朵、伊薩·米勒、傑森·摩莫亞、雷·費雪、黛安·蓮恩、J·K·西門斯、康妮·尼爾森和希朗·漢德。
+            故事敘述由蝙蝠俠和神力女超人兩人試圖與閃電俠、水行俠、鋼骨結盟，復活超人以對抗即將對地球造成威脅的外星敵軍。
+            《正義聯盟》於2014年10月正式宣布，史奈德將和泰瑞歐共同創作該片的劇本。最初其片名宣布為《Justice League Part One》。
+            《正義聯盟》於2016年4月11日正式開始拍攝。史奈德於2017年5月22日因家庭因素而不得已退出電影的後製階段，使得改讓喬斯·溫登代替他的職務，
+            並撰寫和執導史奈德原本計劃的額外補拍[4]。該片由華納兄弟定於2017年11月17日在美國上映（含2D、3D和IMAX 3D版）。
+            查克·史奈德重製本片的《查克·史奈德之正義聯盟》於2021年上線HBO Max。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=3cxixDgHUYw&ab_channel=WarnerBros.Pictures" class="trailer">觀看預告</a>
+        </div>
+    </div>
+</body>
+</html>

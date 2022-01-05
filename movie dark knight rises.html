@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>dark knight rises</title>
+    <link rel="stylesheet" href="StyleSheet3.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyC7XrOMrNPW2nAjgDAiTBCYRQrz3lkX_qY",
+            authDomain: "alien-53e37.firebaseapp.com",
+            projectId: "alien-53e37",
+            storageBucket: "alien-53e37.appspot.com",
+            messagingSenderId: "727163580226",
+            appId: "1:727163580226:web:733c1cdfe97e256582e2db",
+            measurementId: "G-P5XW55QMVG"
+        });
+        var db = firebase.firestore();
+
+
+        function writeData() {
+            db.collection("DARK KNIGHT RISES").add({
+                score: document.getElementById("123").value
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                    document.getElementById("123").value = "";
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+    </script>
+    <div class="topline">
+        <a href="movie.html"><img src="圖頁/back.png" class="back"></a>
+        <img src="圖頁/alien.png" class="logo">
+    </div>
+
+    <div class="title">
+        DARK KNIGHT RISES
+        <input class="number" id="123" type="number" min="0" max="5" value="">
+        <button class="score" type="button" onclick="writeData()">ALIEN IT !</button>
+    </div>
+    <div class="all">
+        <div class="pic">
+            <img src="圖頁/電影/p27.jpg" alt="Avatar" class="image">
+        </div>
+
+        <div class="content">
+            <h3>《黑暗騎士：黎明昇起》（英語：The Dark Knight Rises）</h3>
+            是一部於2012年上映的超級英雄電影，由克里斯多福·諾蘭執導，並與他的弟弟強納森·諾蘭共同編劇。故事由諾蘭和大衛·S·高耶所提供。
+            該片為諾蘭所執導的黑暗騎士三部曲中的最後一部作品，且是《蝙蝠俠：開戰時刻》（2005年）及《黑暗騎士》（2008年）的續集。克里斯汀·貝爾、
+            米高·肯恩、蓋瑞·歐德曼及摩根·費里曼分別於電影中飾演布魯斯·韋恩 / 蝙蝠俠、阿福·潘尼沃斯、詹姆斯·高登與盧修斯·福斯。電影還出現了塞琳娜·凱爾（安·海瑟薇飾演）和班恩（湯姆·哈迪飾演）。
+            背景設定於上部《黑暗騎士》的八年後，新敵人班恩的無情虛假革命迫使隱居的布魯斯·韋恩復出成為蝙蝠俠，並從核危機之中拯救高譚市。
+            劇情靈感來源自著名蝙蝠俠漫畫《蝙蝠俠：騎士隕落》、《蝙蝠俠：黑暗騎士歸來》和《蝙蝠俠：無人地帶》。導演克里斯多福·諾蘭最初對電影蝙蝠俠第三部的發展有所猶豫，
+            由於前作《黑暗騎士》獲得的高評價，諾蘭擔心三部曲可能無法超越二部曲的優異表現，但最終同意製作。
+        </div>
+    </div>
+
+    <div class="downb">
+        <div class="button">
+            <a href="https://www.youtube.com/watch?v=g8evyE9TuYk&ab_channel=WarnerBros.Pictures" class="trailer">觀看預告</a>
+        </div>
+    </div>
+</body>
+</html>
